@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.build/
+dist/
+*.egg-info/
+
+# venv
+.venv/
+
+# editor junk
+.idea/
+.vscode/
+
+# dev-tools workspace (when tests run under HOME override)
+dev-tools/
