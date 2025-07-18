@@ -15,7 +15,9 @@ def ensure_workspace() -> None:
 def repo_root(cwd: Path = Path.cwd()) -> Path:
     return Path(
         subprocess.check_output(
-            ["git", "-C", cwd, "rev-parse", "--show-toplevel"], text=True
+            ["git", "-C", cwd, "rev-parse", "--show-toplevel"],
+            text=True,
+            stderr=subprocess.DEVNULL,      # ← add this
         ).strip()
     )
 
